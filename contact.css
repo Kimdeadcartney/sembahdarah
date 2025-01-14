@@ -2,7 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('background.jpg'); /* Replace with your desired image */
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -86,7 +86,13 @@ header, footer {
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: auto;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    background-color: #191b1a;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
