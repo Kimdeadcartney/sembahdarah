@@ -1,3 +1,4 @@
+/* Reset body and html to ensure full height */
 html, body {
     margin: 0;
     padding: 0;
@@ -8,16 +9,16 @@ html, body {
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; 
+    min-height: 100vh; /* Pastikan tinggi minimal 100% viewport */
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    background-image: url('background.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    color: #333; 
+    background-image: url('background.jpg'); /* Ganti dengan gambar Anda */
+    background-size: cover; /* Latar belakang mencakup seluruh area */
+    background-position: center; /* Posisi gambar di tengah */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    background-attachment: fixed; /* Membuat gambar tetap */
+    color: #333; /* Warna teks default */
 }
 
 /* Header */
