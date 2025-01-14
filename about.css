@@ -18,20 +18,24 @@ body {
     background-position: center; /* Posisi gambar di tengah */
     background-repeat: no-repeat; /* Tidak mengulang gambar */
     background-attachment: fixed; /* Membuat gambar tetap */
+    color: #333; /* Warna teks default */
 }
 
 /* Header */
 header {
     background-color: #191b1a;
     color: white;
-    height: 80px; /* Tinggi header tetap */
+    height: 70px; /* Tinggi header tetap */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px; /* Ukuran font tetap */
-    width: 100%; /* Header selalu penuh lebar layar */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Pastikan tidak mengecil */
+    font-size: 18px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    position: sticky; /* Header tetap di atas saat scrolling */
+    top: 0;
+    z-index: 1000;
 }
 
 /* Navbar styling */
@@ -50,10 +54,13 @@ header {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar a:hover {
+    background-color: #fff;
     color: #191b1a;
 }
 
@@ -62,18 +69,19 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 40px;
 }
 
 /* CV Section */
 #cv-section {
     width: 90%;
     max-width: 900px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* Latar belakang semi-transparan */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    position: relative; /* Supaya gambar bisa diposisikan absolut */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    position: relative;
+    overflow: hidden; /* Untuk menghindari elemen keluar dari box */
 }
 
 .cv-container {
@@ -82,7 +90,7 @@ main {
 }
 
 .cv-image {
-    position: absolute; /* Memposisikan gambar di pojok kanan atas */
+    position: absolute;
     top: 20px;
     right: 20px;
 }
@@ -91,34 +99,33 @@ main {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 50%; /* Border menjadi bulat */
-    border: 2px solid #191b1a; /* Tambahkan border hijau */
+    border-radius: 50%;
+    border: 3px solid #191b1a; /* Border */
 }
 
 .cv-content {
-    margin-right: 180px; /* Memberi ruang untuk gambar di sebelah kanan */
+    margin-right: 180px; /* Ruang untuk gambar */
+    line-height: 1.8; /* Jarak antar baris teks */
 }
 
-/* Footer */
-footer {
-    background-color: #191b1a;
-    color: white;
-    height: 80px; /* Tinggi footer tetap */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px; /* Ukuran font tetap */
-    margin-top: auto; /* Agar footer berada di bawah */
-    width: 100%; /* Lebar penuh */
-    flex-shrink: 0; /* Pastikan tidak mengecil */
-}
-
-
-/* Updated styles for education and work experience */
-.cv-content h2 {
+.cv-content h1 {
+    font-size: 28px;
     color: #191b1a;
     margin-bottom: 10px;
+}
+
+.cv-content p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.cv-content h2 {
+    color: #191b1a;
     font-size: 22px;
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
 }
 
 .cv-content ul {
@@ -128,9 +135,48 @@ footer {
 .cv-content ul li {
     margin-bottom: 10px;
     line-height: 1.6;
+    color: #333;
 }
 
-/* Highlight key details */
 .cv-content strong {
-    color: #333;
+    color: #222;
+}
+
+/* Footer */
+footer {
+    background-color: #191b1a;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-top: auto;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cv-image {
+        position: static;
+        margin: 20px auto;
+    }
+
+    .cv-content {
+        margin-right: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
 }
