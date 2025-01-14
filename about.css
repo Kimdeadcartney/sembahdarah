@@ -1,0 +1,136 @@
+/* Reset body and html to ensure full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Pastikan tinggi minimal 100% viewport */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url('background.jpg'); /* Ganti dengan gambar Anda */
+    background-size: cover; /* Latar belakang mencakup seluruh area */
+    background-position: center; /* Posisi gambar di tengah */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    background-attachment: fixed; /* Membuat gambar tetap */
+}
+
+/* Header */
+header {
+    background-color: #191b1a;
+    color: white;
+    height: 80px; /* Tinggi header tetap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Ukuran font tetap */
+    width: 100%; /* Header selalu penuh lebar layar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Pastikan tidak mengecil */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #191b1a;
+}
+
+/* Main content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+/* CV Section */
+#cv-section {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* Supaya gambar bisa diposisikan absolut */
+}
+
+.cv-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cv-image {
+    position: absolute; /* Memposisikan gambar di pojok kanan atas */
+    top: 20px;
+    right: 20px;
+}
+
+.cv-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Border menjadi bulat */
+    border: 2px solid #191b1a; /* Tambahkan border hijau */
+}
+
+.cv-content {
+    margin-right: 180px; /* Memberi ruang untuk gambar di sebelah kanan */
+}
+
+/* Footer */
+footer {
+    background-color: #191b1a;
+    color: white;
+    height: 80px; /* Tinggi footer tetap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; /* Ukuran font tetap */
+    margin-top: auto; /* Agar footer berada di bawah */
+    width: 100%; /* Lebar penuh */
+    flex-shrink: 0; /* Pastikan tidak mengecil */
+}
+
+
+/* Updated styles for education and work experience */
+.cv-content h2 {
+    color: #191b1a;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.cv-content ul {
+    padding-left: 20px;
+}
+
+.cv-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Highlight key details */
+.cv-content strong {
+    color: #333;
+}
